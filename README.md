@@ -15,6 +15,29 @@ heroprotocol can be used as a base-build-specific library to decode binary blobs
 Note that heroprotocol does not expose game balance information or provide any kind of high level analysis of replays; it's meant
 to be just the first tool in the chain for your data mining application.
 
+# How to use
+ * install python 2.x (https://www.python.org/downloads/release/python-2711/) 
+ ```
+ usage: heroprotocol.py [-h] [--gameevents] [--messageevents] [--trackerevents]
+                       [--attributeevents] [--header] [--details] [--initdata]
+                       [--stats]
+                       replay_file
+
+positional arguments:
+  replay_file        .SC2Replay file to load
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --gameevents       print game events
+  --messageevents    print message events
+  --trackerevents    print tracker events
+  --attributeevents  print attributes events
+  --header           print protocol header
+  --details          print protocol details
+  --initdata         print protocol initdata
+  --stats            print stats
+  ```
+
 # Supported Versions
 
 heroprotocol supports all Hereos of the Storm replay files that were written with retail versions of the game. The current plan is to support all future publicly released versions, including public betas.
